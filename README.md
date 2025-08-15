@@ -66,32 +66,29 @@ Shortcut: [Samsung Galaxy Books Download Centre](https://www.samsung.com/global/
 
 2. Switch to the country where you made the purchase at the top of the page.
 
-    [<img src="./images/driver_pack/DownloadCenter_Step_1.png" width="50%" />](./images/driver_pack/DownloadCenter_Step_1.png)
+    You might potentially **NOT** find your device, if the country does not match the origin of the device.
 
-> [!IMPORTANT]
-> You might potentially **NOT** find your device, if the country does not match the origin of the device.
+    [<img src="./images/driver_pack/DownloadCenter_Step_1.png" width="50%" />](./images/driver_pack/DownloadCenter_Step_1.png)
 
 3. Select `Galaxy Book4 Edge` in the first dropdown selection,  
     and the specific model of your device in the second dropdown box.
 
-    [<img src="./images/driver_pack/DownloadCenter_Step_2.png" width="25%" />](./images/driver_pack/DownloadCenter_Step_2.png)
+    [<img src="./images/driver_pack/DownloadCenter_Step_2.png" width="50%" />](./images/driver_pack/DownloadCenter_Step_2.png)
 
-4. Hit the button to select the device, and you should be redirected to the download page of your device.
+4. Hit the button to select the device, and you should be redirected to the download page of your device.  
     In my case, this was the device [NP750XQA-KB1DE](https://www.samsung.com/global/galaxybooks-downloadcenter/model/?modelCode=NP750XQA-KB1DE&siteCode=de).
 
 5. Download the **Qualcomm - Windows Driver Pack** file.
 
+    Do **NOT** download the *PE DriverPack*. It is **NOT** going to work. Do not waste your time like I did.
+
     [<img src="./images/driver_pack/DownloadCenter_Step_3.png" width="50%" />](./images/driver_pack/DownloadCenter_Step_3.png)
 
-> [!CAUTION]
-> Do **NOT** download the *PE DriverPack*. It is **NOT** going to work. Do not waste your time like I did.
-
 6. Extract the drivers to `C:\Drivers`. Create this directory, if it doesn't exist yet.
+
+    You can use any directory path, but be aware that every instructions from now on assumes the drivers can be found in `C:\Drivers`.
     
     [<img src="./images/driver_pack/Drivers.png" width="50%" />](./images/driver_pack/Drivers.png)
-
-> [!NOTE]
-> You can use any directory path, but be aware that every instructions from now on assumes the drivers can be found in `C:\Drivers`.
 
 </details>
 
@@ -115,7 +112,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
     mkdir C:\Drivers
     ```
 
-    You can use any directory path, but be aware that every instructions from now on assumes the drivers can be found in `C:\Drivers`.
+    You can use any directory path, but be aware that every instruction from now on assumes that the drivers can be found in `C:\Drivers`.
 
 3. Export the drivers to that folder:
 
@@ -133,15 +130,11 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 1. Navigate to the [Download and install the Windows ADK](https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install) website.
 
-2. Scroll down to the first download section.
-
-    In my case this was `Download the ADK 10.1.26100.2454 (December 2024)`.
-
-3. Download **both** the *Windows ADK* **and** the *Windows PE add-on*.
+2. Download **both** the *Windows ADK* **and** the *Windows PE add-on*.
 
     [<img src="./images/windows_adk/Download.png" width="25%" />](./images/windows_adk/Download.png)
 
-4. Start the Windows ADK setup (adksetup.exe) first, use the default settings,  
+3. Start the Windows ADK setup (adksetup.exe) first, use the default settings,  
     and install only the *Deployment Tools* feature in the fourth step.
 
     <details>
@@ -154,7 +147,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
     [<img src="./images/windows_adk/Step_5.png" width="40%" />](./images/windows_adk/Step_5.png)
     </details>
 
-5. Start the Windows PE add-on setup (adkwinpesetup.exe) second, and use the default settings.
+4. Start the Windows PE add-on setup (adkwinpesetup.exe) second, and use the default settings.
 
     <details>
     <summary>Reveal the install steps pictures</summary>
@@ -166,7 +159,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
     [<img src="./images/windows_adk/PE_Step_5.png" width="40%" />](./images/windows_adk/PE_Step_5.png)
     </details>
 
-6. The installation is finished at this point, but you can verify that everything went well by
+5. The installation is finished at this point, but you can verify that everything went well by
     checking if the `dism.exe` exists in the right place, assuming you installed Windows ADK to the default path.
     You will run into issues with the `copype` command later, if this executable does not exist.
 
@@ -187,18 +180,17 @@ The *dism command* to export drivers found 340 drivers on my target device.
     cmd.exe /k "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\DandISetEnv.bat" 
     ```
 
-2. Switch to the Windows PE subdirectory
+2. Switch to the Windows PE subdirectory.
     ```bat
     cd "..\Windows Preinstallation Environment\amd64"
     ```
     If you receive `The system cannot find the path specified` at this step, then go back and [install the Windows ADK PE add-on](#how-to-install-windows-adk).
 
-3. Ensure `C:\WinPE` does not exist on your hard drive
+3. Ensure the directory `C:\WinPE` does not exist.
 
-4. Run `copype arm64 C:\WinPE`
+4. Run `copype arm64 C:\WinPE`.
 
-> [!NOTE]
-> You can use any output directory path, but make sure to fix the paths in the commands below, if you change it.
+    You can use any output directory path, but make sure to fix the paths in the commands below, if you change it.
 
 5. Mount the WinPE installation medium.
 
@@ -236,13 +228,13 @@ The *dism command* to export drivers found 340 drivers on my target device.
         exit
         ```
 
-> [!NOTE]
-> The second command `list disk` is going to show you the available disks on your device,
-> and you must to select the USB flash drive disk in the next command, e.g. `select disk 3`.
+        :memo: **Note:**  
+        The second command `list disk` is going to show you the available disks on your device,
+        and you must to select the USB flash drive disk in the next command, e.g. `select disk 3`.
 
-> [!IMPORTANT]
-> If your USB flash drive is too large for FAT32, then use the command `create partition primary size=30000`,  
-> but be aware that this will obviously limit your partition to around 30 GB.
+        :warning: **Important:**  
+        If your USB flash drive is too large for FAT32, then use the command `create partition primary size=30000`,  
+        but be aware that this will obviously limit your partition to around 30 GB.
 
     - Create an ISO file and manually flash the USB flash drive:
 
@@ -283,8 +275,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 2. Create the `C:\WinDrive` directory on your hard drive.
 
-> [!NOTE]
-> You can use any directory path, but make sure to fix the paths in the commands below, if you change it.
+    You can use any directory path, but make sure to fix the paths in the commands below, if you change it.
 
 3. Extract the `install.wim` file to `C:\WinDrive\install.wim`.
 
@@ -337,8 +328,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 10. Split the `install.wim` file, if it's above 4 GB (4,294,967,295 bytes).
 
-    > [!IMPORTANT]
-    > This is really only necessary, if your `install.wim`+drivers exceeds the 4 GB maximum file size of FAT32.
+    This is really only necessary, if your `install.wim`+drivers exceeds the 4 GB maximum file size of FAT32.
 
     ```bat
     dism /Split-Image /ImageFile:"C:\WinDrive\install.wim" /SWMFile:"C:\WinDrive\install.swm" /FileSize:3800
@@ -346,8 +336,8 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 11. Format the second USB flash drive as FAT32.
 
-    > [!IMPORTANT]
-    > Do not overwrite your USB flash drive with WinPE on it. Use the second USB flash drive for this.
+    :warning: **Important:**  
+    Do not overwrite your USB flash drive with WinPE on it. Use the second USB flash drive for this.
 
 12. Copy the installation medium to the second USB flash drive.
 
