@@ -4,15 +4,7 @@ This elaborate tutorial guides you through the torturous process of installing t
 
 The information presented in this tutorial is primarily based on the work in the repository [Acercandr0/Snapdragon-X-Windows-ARM-reinstall](https://github.com/Acercandr0/Snapdragon-X-Windows-ARM-reinstall) by [Acercandr0](https://github.com/Acercandr0), and on the work in the GitHub Gist [caccialdo/article.adoc](https://gist.github.com/caccialdo/3b0d0113489ecee456d94c1e9462d755) by [caccialdo](https://github.com/caccialdo), including the comments by other users below that Gist.
 
-<pre>
-THIS TUTORIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS  
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING  
-FROM, OUT OF OR IN CONNECTION WITH THIS TUTORIAL OR THE USE OR OTHER  
-DEALINGS IN THIS TUTORIAL.
-</pre>
+> THIS TUTORIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A  PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THIS TUTORIAL OR THE USE OR OTHER DEALINGS IN THIS TUTORIAL.
 
 ## Requirements
 
@@ -20,23 +12,23 @@ DEALINGS IN THIS TUTORIAL.
 
 - 2x USB flash drive (each one should have at least 8 GB capacity, up to 32 GB due to FAT32 limitations on Windows)
 
-    > [!TIP]
-    > You can use a USB flash drive with a capacity over 32 GB, but you won't be able to use more than 32 GB for the FAT32 partition.
+> [!TIP]
+> You can use a USB flash drive with a capacity over 32 GB, but you won't be able to use more than 32 GB for the FAT32 partition.
 
-    > [!IMPORTANT]
-    > It is of utmost importance that you can plug in both USB flash drives into the target device at the same time.  
-    > You can use a USB Hub to get around the port limitations of your device.
+> [!IMPORTANT]
+> It is of utmost importance that you can plug in both USB flash drives into the target device at the same time.  
+> You can use a USB Hub to get around the port limitations of your device.
 
 - Windows Driver Pack from Qualcomm
 
-    > [!IMPORTANT]
-    > You can either [download the driver pack from the Samsung website](#use-the-driver-pack-from-qualcomm) (**recommended**), or
-    > [manually create a backup of your drivers](#manually-create-a-driver-pack) on your device, and later use them.
+> [!IMPORTANT]
+> You can either [download the driver pack from the Samsung website](#use-the-driver-pack-from-qualcomm) (**recommended**), or
+> [manually create a backup of your drivers](#manually-create-a-driver-pack) on your device, and later use them.
 
 - [Windows Assessment and Deployment Kit](https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install) (Windows ADK)
 
-    > [!IMPORTANT]
-    > Download and install the **Windows PE add-on for the Windows ADK** as well.
+> [!IMPORTANT]
+> Download and install the **Windows PE add-on for the Windows ADK** as well.
 
 ## Overview
 
