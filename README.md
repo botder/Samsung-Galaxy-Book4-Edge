@@ -1,13 +1,17 @@
 # Installing Microsoft Windows on a Samsung Galaxy Book4 Edge
 
-This elaborate tutorial guides you through the torturous process of installing the Microsoft Windows operating system on a [Samsung Galaxy Book4 Edge](https://www.samsung.com/us/computing/galaxy-books/galaxy-book4-edge/)
-with the [Snapdragon X Plus](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-plus) (X1P-42-100) central processing unit. This tutorial is probably also applicable to similiar devices with an ARM64 architecture cpu.
+This elaborate tutorial guides you through the torturous process of installing the Microsoft Windows operating system on a [Samsung Galaxy Book4 Edge](https://www.samsung.com/us/computing/galaxy-books/galaxy-book4-edge/) with the [Snapdragon X Plus](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-plus) (X1P-42-100) central processing unit. This tutorial is probably also applicable to similiar devices with an ARM64 architecture cpu.
 
-The information presented in this tutorial is primarily based on the work in the repository [Acercandr0/Snapdragon-X-Windows-ARM-reinstall](https://github.com/Acercandr0/Snapdragon-X-Windows-ARM-reinstall) by [Acercandr0](https://github.com/Acercandr0),  
-and on the work in the GitHub Gist [caccialdo/article.adoc](https://gist.github.com/caccialdo/3b0d0113489ecee456d94c1e9462d755) by [caccialdo](https://github.com/caccialdo), including the comments by other users below that Gist.
+The information presented in this tutorial is primarily based on the work in the repository [Acercandr0/Snapdragon-X-Windows-ARM-reinstall](https://github.com/Acercandr0/Snapdragon-X-Windows-ARM-reinstall) by [Acercandr0](https://github.com/Acercandr0), and on the work in the GitHub Gist [caccialdo/article.adoc](https://gist.github.com/caccialdo/3b0d0113489ecee456d94c1e9462d755) by [caccialdo](https://github.com/caccialdo), including the comments by other users below that Gist.
 
 <pre>
-THIS TUTORIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THIS TUTORIAL OR THE USE OR OTHER DEALINGS IN THIS TUTORIAL.
+THIS TUTORIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS  
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING  
+FROM, OUT OF OR IN CONNECTION WITH THIS TUTORIAL OR THE USE OR OTHER  
+DEALINGS IN THIS TUTORIAL.
 </pre>
 
 ## Requirements
@@ -16,22 +20,22 @@ THIS TUTORIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPL
 
 - 2x USB flash drive (each one should have at least 8 GB capacity, up to 32 GB due to FAT32 limitations on Windows)
 
-    > [!TIP]  
+    > [!TIP]
     > You can use a USB flash drive with a capacity over 32 GB, but you won't be able to use more than 32 GB for the FAT32 partition.
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > It is of utmost importance that you can plug in both USB flash drives into the target device at the same time.  
     > You can use a USB Hub to get around the port limitations of your device.
 
 - Windows Driver Pack from Qualcomm
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > You can either [download the driver pack from the Samsung website](#use-the-driver-pack-from-qualcomm) (**recommended**), or
     > [manually create a backup of your drivers](#manually-create-a-driver-pack) on your device, and later use them.
 
 - [Windows Assessment and Deployment Kit](https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install) (Windows ADK)
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > Download and install the **Windows PE add-on for the Windows ADK** as well.
 
 ## Overview
@@ -69,15 +73,13 @@ Shortcut: [Samsung Galaxy Books Download Centre](https://www.samsung.com/global/
     There you can find the model number next to **BaseBoard Product**.
 </details>
 
-<br>
-
 <details>
 <summary>Reveal the download instructions</summary>
 
 1. Navigate to the [Samsung Galaxy Books Download Centre](https://www.samsung.com/global/galaxybooks-downloadcenter/) website.
 
 2. Switch to the country where you made the purchase at the top of the page.
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > You might potentially **NOT** find your device, if the country does not match the origin of the device.
 
     ![A picture that shows the dropdown where you can select your language and region on the website](./images/driver_pack/DownloadCenter_Step_1.png)
@@ -93,11 +95,11 @@ Shortcut: [Samsung Galaxy Books Download Centre](https://www.samsung.com/global/
 
     ![A picture that shows the download for the Windows Driver Pack](./images/driver_pack/DownloadCenter_Step_3.png)
 
-    > [!CAUTION]  
+    > [!CAUTION]
     > Do **NOT** download the *PE DriverPack*. It is **NOT** going to work. Do not waste your time like I did.
 
 6. Extract the drivers to `C:\Drivers`. Create this directory, if it doesn't exist yet.
-    > [!NOTE]  
+    > [!NOTE]
     > You can use any directory path, but be aware that every instructions from now on assumes the drivers can be found in `C:\Drivers`.
 
     ![A picture that shows the unpacked Windows Driver Pack on the C drive](./images/driver_pack/Drivers.png)
@@ -123,7 +125,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
     mkdir C:\Drivers
     ```
 
-    > [!NOTE]  
+    > [!NOTE]
     > You can use any directory path, but be aware that every instructions from now on assumes the drivers can be found in `C:\Drivers`.
 
 3. Export the drivers to that folder:
@@ -185,8 +187,6 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 </details>
 
-<br>
-
 # How to create a Windows PE boot device
 
 1. Start `Deployment and Imaging Tools Environment` as Administrator
@@ -208,7 +208,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 4. Run `copype arm64 C:\WinPE`
 
-    > [!NOTE]  
+    > [!NOTE]
     > You can use any output directory path, but make sure to fix the paths in the commands below, if you change it.
 
 5. Mount the WinPE installation medium.
@@ -251,11 +251,11 @@ The *dism command* to export drivers found 340 drivers on my target device.
         exit
         ```
 
-        > [!NOTE]  
+        > [!NOTE]
         > The second command `list disk` is going to show you the available disks on your device,
         > and you must to select the USB flash drive disk in the next command, e.g. `select disk 3`.
 
-        > [!IMPORTANT]  
+        > [!IMPORTANT]
         > If your USB flash drive is too large for FAT32, then use the command `create partition primary size=30000`,  
         > but be aware that this will obviously limit your partition to around 30 GB.
 
@@ -300,7 +300,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 2. Create the `C:\WinDrive` directory on your hard drive.
 
-    > [!NOTE]  
+    > [!NOTE]
     > You can use any directory path, but make sure to fix the paths in the commands below, if you change it.
 
 3. Extract the `install.wim` file to `C:\WinDrive\install.wim`.
@@ -354,7 +354,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 10. Split the `install.wim` file, if it's above 4 GB (4,294,967,295 bytes).
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > This is really only necessary, if your `install.wim`+drivers exceeds the 4 GB maximum file size of FAT32.
 
     ```bat
@@ -363,7 +363,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 11. Format the second USB flash drive as FAT32.
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > Do not overwrite your USB flash drive with WinPE on it. Use the second USB flash drive for this.
 
 12. Copy the installation medium to the second USB flash drive.
@@ -388,7 +388,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
 
 3. Power on the computer and switch to the UEFI/BIOS menu by repeatedly hitting F2 when you see the Samsung boot logo.
 
-    > [!TIP]  
+    > [!TIP]
     > If your device keeps booting into Windows, then there is another way to enter the UEFI menu:
     > - Open your start menu
     > - Click on the power icon
@@ -436,7 +436,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
     dir D:\
     ```
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > The remainder of these steps assume your second USB flash drive was mounted as `D:\`.
 
 7. Erase the first disk and set up the partitions as required by the Windows operating system.  
@@ -456,7 +456,7 @@ The *dism command* to export drivers found 340 drivers on my target device.
          /SWMFile:D:\install*.swm
     ```
 
-    > [!WARNING]  
+    > [!WARNING]
     > The *dism* command above must be written on a single line inside the command prompt within WinPE.
     > I have written it this way here so it's easier to read and copy.
 
