@@ -10,25 +10,19 @@ The information presented in this tutorial is primarily based on the work in the
 
 - A working x86_64/AMD64 computer with the Microsoft Windows operating system, or a virtual machine with Windows.
 
-- 2x USB flash drive (each one should have at least 8 GB capacity, up to 32 GB due to FAT32 limitations on Windows)
+- 2x USB flash drive (each one should have at least 8 GB capacity, up to 32 GB due to FAT32 limitations on Windows)  
+    <sup>You can use a USB flash drive with a capacity over 32 GB, but you won't be able to use more than 32 GB for the FAT32 partition.</sub>
 
-- Windows Driver Pack from Qualcomm
+- Windows Driver Pack from Qualcomm  
+    <sup>You can either [download the driver pack from the Samsung website](#use-the-driver-pack-from-qualcomm) (**recommended**), or 
+    [manually create a backup of your drivers](#manually-create-a-driver-pack) on your device, and later use them.</sup>
 
-- [Windows Assessment and Deployment Kit](https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install) (Windows ADK)
-
-> [!TIP]
-> You can use a USB flash drive with a capacity over 32 GB, but you won't be able to use more than 32 GB for the FAT32 partition.
+- [Windows Assessment and Deployment Kit](https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install) (Windows ADK)  
+    <sup>Download and install the **Windows PE add-on for the Windows ADK** as well.</sup>
 
 > [!IMPORTANT]
 > It is of utmost importance that you can plug in both USB flash drives into the target device at the same time.  
 > You can use a USB Hub to get around the port limitations of your device.
-
-> [!IMPORTANT]
-> You can either [download the driver pack from the Samsung website](#use-the-driver-pack-from-qualcomm) (**recommended**), or
-> [manually create a backup of your drivers](#manually-create-a-driver-pack) on your device, and later use them.
-
-> [!IMPORTANT]
-> Download and install the **Windows PE add-on for the Windows ADK** as well.
 
 ## Overview
 
