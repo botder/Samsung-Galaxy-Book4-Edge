@@ -23,6 +23,9 @@ This elaborate tutorial guides you through the torturous process of installing t
 - [Rufus](https://rufus.ie/en/) to create a bootable USB flash drive  
     <sup>This is optional, and [Ventoy](https://www.ventoy.net/en/index.html) does **not** work</sup>
 
+> [!CAUTION]  
+> You must be able to plug your USB flash drive to the USB-C slot on the left side of the device. You can use a USB-A to USB-C adapter for this. It will not work with the USB-A slot on the right side of the laptop (though you can get around the initial driver issue window by installing literally any driver, but this is very broken and not recommended).
+
 ## Create a bootable USB flash drive
 
 > [!TIP]  
@@ -128,6 +131,9 @@ This elaborate tutorial guides you through the torturous process of installing t
 1. Power off your target computer
 
 2. Plug in the USB flash drive, and other optional devices like a keyboard and mouse
+
+> [!CAUTION]  
+> You must be able to plug your USB flash drive to the USB-C slot on the left side of the device. You can use a USB-A to USB-C adapter for this. It will not work with the USB-A slot on the right side of the laptop (though you can get around the initial driver issue window by installing literally any driver, but this is very broken and not recommended).
 
 3. Power on the computer, and switch to the UEFI/BIOS menu by repeatedly hitting F2 when you see the Samsung boot logo
 
