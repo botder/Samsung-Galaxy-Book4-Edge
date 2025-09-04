@@ -33,7 +33,7 @@ This document describes the usage of the included [rebuild-iso-with-drivers.cmd]
 7. Switch to `C:\WinIso`
 
     ```bat
-    cd /d `C:\WinIso`
+    cd /d C:\WinIso
     ```
 
 8. Run `rebuild-iso-with-drivers.cmd` and wait until its finished

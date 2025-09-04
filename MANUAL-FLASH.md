@@ -11,12 +11,6 @@ This document describes how to manually format your USB flash drive, to copy the
 
 2. Format your USB flash drive manually
 
-> [!IMPORTANT]  
-> Use `create partition primary size=30000` below, if your USB flash drive capacity is over 32 GB.
-
-> [!CAUTION]  
-> The second command `list disk` is going to show you the available disks on your device, and you must to select the USB flash drive disk in the next command, e.g. `select disk 3`.
-
     ```bat
     diskpart
     list disk
@@ -28,6 +22,12 @@ This document describes how to manually format your USB flash drive, to copy the
     assign letter "x"
     exit
     ```
+
+> [!IMPORTANT]  
+> Use `create partition primary size=30000` above, if your USB flash drive capacity is over 32 GB.
+
+> [!CAUTION]  
+> The second command `list disk` is going to show you the available disks on your device, and you must to select the USB flash drive disk in the next command, e.g. `select disk 3`.
 
 ## Copy files to your USB flash drive
 
