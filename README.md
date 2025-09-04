@@ -29,8 +29,7 @@ This elaborate tutorial guides you through the torturous process of installing t
 ## Create a bootable USB flash drive
 
 > [!TIP]  
-> I created a Batch script to automate this entire process. It adds the drivers to both `boot.wim`, and to every Windows image inside `install.wim`. If you installed [7-Zip](https://www.7-zip.org) to the default directory, then it will also extract the files from your source ISO too.  
-> Further information can be found in the [SCRIPT.md](SCRIPT.md) document.
+> I created a Batch script to automate this entire process. It adds the drivers to both `boot.wim`, and to every Windows image inside `install.wim`. If you installed [7-Zip](https://www.7-zip.org) to the default directory, then it will also extract the files from your source ISO too. Further information can be found in the [SCRIPT.md](SCRIPT.md) document.
 
 1. Create the directory `C:\WinIso`  
     <sup>The location does *not* matter, but you need at least 20 GB of free space</sup>
@@ -112,7 +111,7 @@ This elaborate tutorial guides you through the torturous process of installing t
 
 11. Flash the ISO
 
-    You are not required to use Rufus, you can also try to manually flash your USB flash drive, by using diskpart and copying the files over. Read [this manual](MANUAL-FLASH.md) with the steps.
+    You are not required to use [Rufus](https://rufus.ie/en/), you can also try to manually flash your USB flash drive, by using diskpart and copying the files over. Read [this manual](MANUAL-FLASH.md) with the steps.
 
     1. Open Rufus
     2. Click on `SELECT` and open `C:\WinIso\Windows.iso`

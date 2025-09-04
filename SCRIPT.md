@@ -43,7 +43,7 @@ This document describes the usage of the included [rebuild-iso-with-drivers.cmd]
 
 9. Flash the ISO
 
-    You are not required to use Rufus, you can also try to manually flash your USB flash drive, by using diskpart and copying the files over. Read [this manual](MANUAL-FLASH.md) with the steps.
+    You are not required to use [Rufus](https://rufus.ie/en/), you can also try to manually flash your USB flash drive, by using diskpart and copying the files over. Read [this manual](MANUAL-FLASH.md) with the steps.
 
     1. Open Rufus
     2. Click on `SELECT` and open `C:\WinIso\Windows.iso`
