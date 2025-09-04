@@ -1,6 +1,8 @@
 # Windows 11 for Arm64
 
-This document lists websites where you can download an ISO for *Windows 11 for Arm64*.
+This document lists websites where you can download an ISO for *Windows 11 for Arm64*, and how to extract files from the ISO.
+
+## Download a Windows.iso
 
 > [!NOTE]  
 > UUP dump does not provide an ISO file directly. You will receive a script that will build the ISO file for you, automatically. You can customize the script to a degree, for example, to integrate available updates.
@@ -28,3 +30,22 @@ This document lists websites where you can download an ISO for *Windows 11 for A
 
 - [macOS: CrystalFetch](https://github.com/TuringSoftware/CrystalFetch)  
     <sup>macOS UI for creating Windows installer ISO from UUPDump.</sup>
+
+## Extract files from a Windows.iso
+
+- Using Windows Explorer:
+
+    1. Mount your Windows.iso using Windows Explorer.
+
+        You can right-click on your ISO file, and select `Open with > Windows Explorer` in the context menu.
+
+    2. Copy all files from the mounted drive to the target directory.
+
+- Using [7-Zip](https://www.7-zip.org):
+
+    1. Open your Windows.iso using 7-Zip File Manager.
+
+        You can right-click on your ISO file, and select `Open with > 7-Zip File Manager` in the context menu.  
+        You can also use `7-Zip > Open archive` or `7-Zip > Extract files...`.
+    
+    2. Extract the files to the target directory.
