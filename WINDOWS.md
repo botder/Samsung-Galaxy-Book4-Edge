@@ -13,16 +13,16 @@ This document lists websites where you can download an ISO for *Windows 11 for A
 - [UUP dump: Latest Public Release build](https://uupdump.net/fetchupd.php?arch=arm64&ring=retail)  
     <sup>Latest updated build for regular users.</sup>
 
-- [UUP dump: Latest Release Preview build](https://uupdump.net/fetchupd.php?arch=arm64&ring=retail)  
+- [UUP dump: Latest Release Preview build](https://uupdump.net/fetchupd.php?arch=arm64&ring=rp)  
     <sup>Reliable builds for previewing the next release. Ideal for trying out upcoming releases.</sup>
 
-- [UUP dump: Latest Beta Channel build](https://uupdump.net/fetchupd.php?arch=arm64&ring=retail)  
+- [UUP dump: Latest Beta Channel build](https://uupdump.net/fetchupd.php?arch=arm64&ring=wis)  
     <sup>Reliable builds with most upcoming features available. Ideal for early adopters.</sup>
 
-- [UUP dump: Latest Dev Channel build](https://uupdump.net/fetchupd.php?arch=arm64&ring=retail)  
+- [UUP dump: Latest Dev Channel build](https://uupdump.net/fetchupd.php?arch=arm64&ring=wif)  
     <sup>Somewhat unreliable builds with new ideas and long lead features. Ideal for enthusiasts.</sup>
 
-- [UUP dump: Latest Canary Channel build](https://uupdump.net/fetchupd.php?arch=arm64&ring=retail)  
+- [UUP dump: Latest Canary Channel build](https://uupdump.net/fetchupd.php?arch=arm64&ring=canary)  
     <sup>Somewhat unstable builds with latest platform changes and early features. Ideal for highly technical users.</sup>
 
 - [archive.isdn.network](https://archive.isdn.network/artifacts/)  
