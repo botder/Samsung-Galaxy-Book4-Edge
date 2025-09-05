@@ -4,8 +4,17 @@ This document lists websites where you can download an ISO for *Windows 11 for A
 
 ## Download a Windows.iso
 
+> [!TIP]  
+> If you don't know what ISO to use, then just use the ISO provided by Microsoft on their website. You can always upgrade the installed edition with a generic edition key. If you are looking for Windows 11 IoT Enterprise, then use the ISO from archive.isdn.network.
+
 > [!NOTE]  
 > UUP dump does not provide an ISO file directly. You will receive a script that will build the ISO file for you, automatically. You can customize the script to a degree, for example, to integrate available updates.
+
+> [!WARNING]  
+> Good luck with the UUP dump releases, because the Windows Setup always failed for me. If you really want to try out UUP dump, then make sure to edit the included `ConvertConfig.ini`. You have to set `wim2swm=1`, `UpdtBootFiles=1`, and `vwim2swm=1` to make the final ISO compatible with a FAT32 USB flash drive, and to use the new UEFI CA 2023 boot files (see KB5053484).
+
+> [!TIP]  
+> You can use the *UUP dump* script to automatically install drivers. Edit the included `ConvertConfig.ini` and set `AddDrivers=1`. Create the subdirectory `Drivers\ALL` and then copy the contents of your driver pack there.
 
 - [Microsoft: Download Windows 11 for Arm-based PCs](https://www.microsoft.com/en-gb/software-download/windows11arm64)  
     <sup>Official download from Microsoft for Windows 11 Arm64.</sup>
