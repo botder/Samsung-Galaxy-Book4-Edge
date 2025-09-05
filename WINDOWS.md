@@ -5,7 +5,7 @@ This document lists websites where you can download an ISO for *Windows 11 for A
 ## Download a Windows.iso
 
 > [!TIP]  
-> If you don't know what ISO to use, then just use the ISO provided by Microsoft on their website. You can always upgrade the installed edition with a generic edition key. If you are looking for Windows 11 IoT Enterprise, then use the ISO from archive.isdn.network.
+> If you don't know what ISO to use, then just use the ISO provided by Microsoft on their website. You can always upgrade the installed edition with a [generic edition key](https://github.com/dorian-osly/wgkl) (should also work during installation). If you are looking for Windows 11 IoT Enterprise, then use the ISO from archive.isdn.network.
 
 > [!NOTE]  
 > UUP dump does not provide an ISO file directly. You will receive a script that will build the ISO file for you, automatically. You can customize the script to a degree, for example, to integrate available updates.
